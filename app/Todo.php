@@ -15,4 +15,13 @@ class Todo extends Model
     protected $casts = [
         'completed' => 'boolean',
     ];
+
+    protected $appends = ['url'];
+
+    public function getUrlAttribute()
+    {
+        $url = env('BASE_URL') . '/' . $this->id;
+
+        return $url;
+    }
 }
