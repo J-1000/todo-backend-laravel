@@ -21,7 +21,7 @@ class TodosController extends Controller
         return $todo;
     }
 
-    public function get(Request $request)
+    public function show(Request $request)
     {
         $todo = Todo::findOrFail($request->id);
 
