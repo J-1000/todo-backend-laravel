@@ -2,10 +2,10 @@
 
 use Illuminate\Http\Request;
 
-Route::get('/', "TodoController@index");
-Route::post('/', "TodoController@create");
-Route::delete('/', 'TodoController@deleteAll');
-Route::get('/{id}', "TodoController@get");
-Route::patch('/{id}', "TodoController@update");
-Route::delete('/{id}', "TodoController@delete");
+Route::get('/', 'TodosController@index');
+Route::post('/', 'TodosController@create');
+Route::delete('/', 'TodosController@deleteAll');
+Route::get('/{id}', 'TodosController@show');
+Route::patch('/{id}', 'TodosController@update');
+Route::delete('/{id}', 'TodosController@delete');
 
